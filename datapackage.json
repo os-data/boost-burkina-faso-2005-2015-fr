@@ -1,1 +1,3446 @@
-{"@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld", "bytes": 114700216, "count_of_rows": 241753, "hash": "040cd95d3ebc3968bf6b63f20223fc0a", "model": {"dimensions": {"administrative-classification": {"attributes": {"ADMIN1": {"source": "ADMIN1", "title": "ADMIN1"}, "ADMIN2": {"parent": "ADMIN1", "source": "ADMIN2", "title": "ADMIN2"}, "PROJECT1": {"parent": "ADMIN2", "source": "PROJECT1", "title": "PROJECT1"}}, "classificationType": "administrative", "dimensionType": "classification", "primaryKey": ["ADMIN1", "ADMIN2", "PROJECT1"]}, "date": {"attributes": {"YEAR": {"source": "YEAR", "title": "YEAR"}}, "dimensionType": "datetime", "primaryKey": ["YEAR"]}, "economic-classification": {"attributes": {"ECON1": {"source": "ECON1", "title": "ECON1"}, "ECON2": {"parent": "ECON1", "source": "ECON2", "title": "ECON2"}, "ECON3": {"parent": "ECON2", "source": "ECON3", "title": "ECON3"}, "ECON4": {"parent": "ECON3", "source": "ECON4", "title": "ECON4"}}, "classificationType": "economic", "dimensionType": "classification", "primaryKey": ["ECON1", "ECON2", "ECON3", "ECON4"]}, "fin-source": {"attributes": {"SOURCE_FIN1": {"source": "SOURCE_FIN1", "title": "SOURCE_FIN1"}, "SOURCE_FIN2": {"parent": "SOURCE_FIN1", "source": "SOURCE_FIN2", "title": "SOURCE_FIN2"}}, "dimensionType": "other", "primaryKey": ["SOURCE_FIN1", "SOURCE_FIN2"]}, "functional-classification": {"attributes": {"FUNCTION1": {"parent": "SECTOR2", "source": "FUNCTION1", "title": "FUNCTION1"}, "FUNCTION2": {"parent": "FUNCTION1", "source": "FUNCTION2", "title": "FUNCTION2"}, "FUNCTION3": {"parent": "FUNCTION2", "source": "FUNCTION3", "title": "FUNCTION3"}, "SECTOR1": {"source": "SECTOR1", "title": "SECTOR1"}, "SECTOR2": {"parent": "SECTOR1", "source": "SECTOR2", "title": "SECTOR2"}}, "classificationType": "functional", "dimensionType": "classification", "primaryKey": ["SECTOR1", "SECTOR2", "FUNCTION1", "FUNCTION2", "FUNCTION3"]}, "geo-source": {"attributes": {"GEO1": {"source": "GEO1", "title": "GEO1"}}, "dimensionType": "location", "primaryKey": ["GEO1"]}}, "measures": {"APPROVED": {"currency": "XOF", "source": "APPROVED", "title": "APPROVED"}, "COMMITTED": {"currency": "XOF", "source": "COMMITTED", "title": "COMMITTED"}, "MODIFIED": {"currency": "XOF", "source": "MODIFIED", "title": "MODIFIED"}, "ORDERED_TO_PAY": {"currency": "XOF", "source": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY"}, "PAID": {"currency": "XOF", "source": "PAID", "title": "PAID"}, "VALIDATED": {"currency": "XOF", "source": "VALIDATED", "title": "VALIDATED"}}}, "name": "boost-burkina-faso-2005-2015-fr", "profiles": {"fiscal": "*", "tabular": "*"}, "resources": [{"bytes": 114700216, "count_of_rows": 241753, "dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "hash": "664f0518574fc0d1e3f76921bd3f09f3", "name": "boost_burkina_faso_2005_2015_fr", "path": "data/boost_burkina_faso_2005_2015_fr.csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"]}, "profile": "data-resource"}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2016", "path": "data/2016.csv", "count_of_rows": 18108}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2015", "path": "data/2015.csv", "count_of_rows": 26881}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2014", "path": "data/2014.csv", "count_of_rows": 27529}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2013", "path": "data/2013.csv", "count_of_rows": 26853}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2012", "path": "data/2012.csv", "count_of_rows": 22248}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2011", "path": "data/2011.csv", "count_of_rows": 21494}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2010", "path": "data/2010.csv", "count_of_rows": 20347}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2009", "path": "data/2009.csv", "count_of_rows": 18621}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2008", "path": "data/2008.csv", "count_of_rows": 18047}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2007", "path": "data/2007.csv", "count_of_rows": 15725}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2006", "path": "data/2006.csv", "count_of_rows": 13581}, {"dialect": {"delimiter": ",", "doubleQuote": true, "lineTerminator": "\r\n", "quoteChar": "\"", "skipInitialSpace": false, "escapeChar": "\\", "header": true, "caseSensitiveHeader": false}, "dpp:streaming": true, "encoding": "utf-8", "format": "csv", "schema": {"fields": [{"conceptType": "administrative-classification", "format": "default", "name": "ADMIN1", "osType": "administrative-classification:generic:level1:code", "slug": "ADMIN1", "title": "ADMIN1", "type": "string"}, {"conceptType": "administrative-classification", "format": "default", "name": "ADMIN2", "osType": "administrative-classification:generic:level2:code:full", "slug": "ADMIN2", "title": "ADMIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "APPROVED", "osType": "value", "slug": "APPROVED", "title": "APPROVED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "COMMITTED", "osType": "value", "slug": "COMMITTED", "title": "COMMITTED", "type": "number"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON1", "osType": "economic-classification:generic:level1:code", "slug": "ECON1", "title": "ECON1", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON2", "osType": "economic-classification:generic:level2:code:full", "slug": "ECON2", "title": "ECON2", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON3", "osType": "economic-classification:generic:level3:code:full", "slug": "ECON3", "title": "ECON3", "type": "string"}, {"conceptType": "economic-classification", "format": "default", "name": "ECON4", "osType": "economic-classification:generic:level4:code:full", "slug": "ECON4", "title": "ECON4", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION1", "osType": "functional-classification:generic:level3:code:full", "slug": "FUNCTION1", "title": "FUNCTION1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION2", "osType": "functional-classification:generic:level4:code:full", "slug": "FUNCTION2", "title": "FUNCTION2", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "FUNCTION3", "osType": "functional-classification:generic:level5:code:full", "slug": "FUNCTION3", "title": "FUNCTION3", "type": "string"}, {"conceptType": "geo-source", "format": "default", "name": "GEO1", "osType": "geo-source:target:code", "slug": "GEO1", "title": "GEO1", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "MODIFIED", "osType": "value", "slug": "MODIFIED", "title": "MODIFIED", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "ORDERED_TO_PAY", "osType": "value", "slug": "ORDERED_TO_PAY", "title": "ORDERED_TO_PAY", "type": "number"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "PAID", "osType": "value", "slug": "PAID", "title": "PAID", "type": "number"}, {"conceptType": "administrative-classification", "format": "default", "name": "PROJECT1", "osType": "administrative-classification:generic:level3:code:full", "slug": "PROJECT1", "title": "PROJECT1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR1", "osType": "functional-classification:generic:level1:code", "slug": "SECTOR1", "title": "SECTOR1", "type": "string"}, {"conceptType": "functional-classification", "format": "default", "name": "SECTOR2", "osType": "functional-classification:generic:level2:code:full", "slug": "SECTOR2", "title": "SECTOR2", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN1", "osType": "fin-source:generic:level1:code", "slug": "SOURCE_FIN1", "title": "SOURCE_FIN1", "type": "string"}, {"conceptType": "fin-source", "format": "default", "name": "SOURCE_FIN2", "osType": "fin-source:generic:level2:code:full", "slug": "SOURCE_FIN2", "title": "SOURCE_FIN2", "type": "string"}, {"conceptType": "value", "decimalChar": ".", "format": "default", "groupChar": "", "name": "VALIDATED", "osType": "value", "slug": "VALIDATED", "title": "VALIDATED", "type": "number"}, {"conceptType": "date", "format": "default", "name": "YEAR", "osType": "date:fiscal-year", "slug": "YEAR", "title": "YEAR", "type": "integer"}], "primaryKey": ["ADMIN1", "ADMIN2", "ECON1", "ECON2", "ECON3", "ECON4", "FUNCTION1", "FUNCTION2", "FUNCTION3", "GEO1", "PROJECT1", "SECTOR1", "SECTOR2", "SOURCE_FIN1", "SOURCE_FIN2", "YEAR"], "missingValues": [""]}, "profile": "tabular-data-resource", "name": "2005", "path": "data/2005.csv", "count_of_rows": 12319}], "title": "BOOST Burkina-Faso 2005-2015  (fr)", "profile": "data-package", "author": "OpenSpending", "owner": "6018ab87076187018fc29c94a68a3cd2"}
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+  "bytes": 114700216,
+  "count_of_rows": 241753,
+  "hash": "040cd95d3ebc3968bf6b63f20223fc0a",
+  "model": {
+    "dimensions": {
+      "administrative-classification": {
+        "attributes": {
+          "ADMIN1": {
+            "source": "ADMIN1",
+            "title": "ADMIN1"
+          },
+          "ADMIN2": {
+            "parent": "ADMIN1",
+            "source": "ADMIN2",
+            "title": "ADMIN2"
+          },
+          "PROJECT1": {
+            "parent": "ADMIN2",
+            "source": "PROJECT1",
+            "title": "PROJECT1"
+          }
+        },
+        "classificationType": "administrative",
+        "dimensionType": "classification",
+        "primaryKey": ["ADMIN1", "ADMIN2", "PROJECT1"]
+      },
+      "date": {
+        "attributes": {
+          "YEAR": {
+            "source": "YEAR",
+            "title": "YEAR"
+          }
+        },
+        "dimensionType": "datetime",
+        "primaryKey": ["YEAR"]
+      },
+      "economic-classification": {
+        "attributes": {
+          "ECON1": {
+            "source": "ECON1",
+            "title": "ECON1"
+          },
+          "ECON2": {
+            "parent": "ECON1",
+            "source": "ECON2",
+            "title": "ECON2"
+          },
+          "ECON3": {
+            "parent": "ECON2",
+            "source": "ECON3",
+            "title": "ECON3"
+          },
+          "ECON4": {
+            "parent": "ECON3",
+            "source": "ECON4",
+            "title": "ECON4"
+          }
+        },
+        "classificationType": "economic",
+        "dimensionType": "classification",
+        "primaryKey": ["ECON1", "ECON2", "ECON3", "ECON4"]
+      },
+      "fin-source": {
+        "attributes": {
+          "SOURCE_FIN1": {
+            "source": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1"
+          },
+          "SOURCE_FIN2": {
+            "parent": "SOURCE_FIN1",
+            "source": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2"
+          }
+        },
+        "dimensionType": "other",
+        "primaryKey": ["SOURCE_FIN1", "SOURCE_FIN2"]
+      },
+      "functional-classification": {
+        "attributes": {
+          "FUNCTION1": {
+            "parent": "SECTOR2",
+            "source": "FUNCTION1",
+            "title": "FUNCTION1"
+          },
+          "FUNCTION2": {
+            "parent": "FUNCTION1",
+            "source": "FUNCTION2",
+            "title": "FUNCTION2"
+          },
+          "FUNCTION3": {
+            "parent": "FUNCTION2",
+            "source": "FUNCTION3",
+            "title": "FUNCTION3"
+          },
+          "SECTOR1": {
+            "source": "SECTOR1",
+            "title": "SECTOR1"
+          },
+          "SECTOR2": {
+            "parent": "SECTOR1",
+            "source": "SECTOR2",
+            "title": "SECTOR2"
+          }
+        },
+        "classificationType": "functional",
+        "dimensionType": "classification",
+        "primaryKey": [
+          "SECTOR1",
+          "SECTOR2",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3"
+        ]
+      },
+      "geo-source": {
+        "attributes": {
+          "GEO1": {
+            "source": "GEO1",
+            "title": "GEO1"
+          }
+        },
+        "dimensionType": "location",
+        "primaryKey": ["GEO1"]
+      }
+    },
+    "measures": {
+      "APPROVED": {
+        "currency": "XOF",
+        "source": "APPROVED",
+        "title": "APPROVED"
+      },
+      "COMMITTED": {
+        "currency": "XOF",
+        "source": "COMMITTED",
+        "title": "COMMITTED"
+      },
+      "MODIFIED": {
+        "currency": "XOF",
+        "source": "MODIFIED",
+        "title": "MODIFIED"
+      },
+      "ORDERED_TO_PAY": {
+        "currency": "XOF",
+        "source": "ORDERED_TO_PAY",
+        "title": "ORDERED_TO_PAY"
+      },
+      "PAID": {
+        "currency": "XOF",
+        "source": "PAID",
+        "title": "PAID"
+      },
+      "VALIDATED": {
+        "currency": "XOF",
+        "source": "VALIDATED",
+        "title": "VALIDATED"
+      }
+    }
+  },
+  "name": "boost-burkina-faso-2005-2015-fr",
+  "profiles": {
+    "fiscal": "*",
+    "tabular": "*"
+  },
+  "resources": [
+    {
+      "bytes": 114700216,
+      "count_of_rows": 241753,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "664f0518574fc0d1e3f76921bd3f09f3",
+      "name": "boost_burkina_faso_2005_2015_fr",
+      "path": "https://storage.openspending.org/boost_burkina_faso_2005_2015_fr.csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ]
+      },
+      "profile": "data-resource"
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2016",
+      "path": "https://storage.openspending.org/2016.csv",
+      "count_of_rows": 18108
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2015",
+      "path": "https://storage.openspending.org/2015.csv",
+      "count_of_rows": 26881
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2014",
+      "path": "https://storage.openspending.org/2014.csv",
+      "count_of_rows": 27529
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2013",
+      "path": "https://storage.openspending.org/2013.csv",
+      "count_of_rows": 26853
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2012",
+      "path": "https://storage.openspending.org/2012.csv",
+      "count_of_rows": 22248
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2011",
+      "path": "https://storage.openspending.org/2011.csv",
+      "count_of_rows": 21494
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2010",
+      "path": "https://storage.openspending.org/2010.csv",
+      "count_of_rows": 20347
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2009",
+      "path": "https://storage.openspending.org/2009.csv",
+      "count_of_rows": 18621
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2008",
+      "path": "https://storage.openspending.org/2008.csv",
+      "count_of_rows": 18047
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2007",
+      "path": "https://storage.openspending.org/2007.csv",
+      "count_of_rows": 15725
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2006",
+      "path": "https://storage.openspending.org/2006.csv",
+      "count_of_rows": 13581
+    },
+    {
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false,
+        "escapeChar": "\\",
+        "header": true,
+        "caseSensitiveHeader": false
+      },
+      "dpp:streaming": true,
+      "encoding": "utf-8",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN1",
+            "osType": "administrative-classification:generic:level1:code",
+            "slug": "ADMIN1",
+            "title": "ADMIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "ADMIN2",
+            "osType": "administrative-classification:generic:level2:code:full",
+            "slug": "ADMIN2",
+            "title": "ADMIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "APPROVED",
+            "osType": "value",
+            "slug": "APPROVED",
+            "title": "APPROVED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "COMMITTED",
+            "osType": "value",
+            "slug": "COMMITTED",
+            "title": "COMMITTED",
+            "type": "number"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON1",
+            "osType": "economic-classification:generic:level1:code",
+            "slug": "ECON1",
+            "title": "ECON1",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON2",
+            "osType": "economic-classification:generic:level2:code:full",
+            "slug": "ECON2",
+            "title": "ECON2",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON3",
+            "osType": "economic-classification:generic:level3:code:full",
+            "slug": "ECON3",
+            "title": "ECON3",
+            "type": "string"
+          },
+          {
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "ECON4",
+            "osType": "economic-classification:generic:level4:code:full",
+            "slug": "ECON4",
+            "title": "ECON4",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION1",
+            "osType": "functional-classification:generic:level3:code:full",
+            "slug": "FUNCTION1",
+            "title": "FUNCTION1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION2",
+            "osType": "functional-classification:generic:level4:code:full",
+            "slug": "FUNCTION2",
+            "title": "FUNCTION2",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "FUNCTION3",
+            "osType": "functional-classification:generic:level5:code:full",
+            "slug": "FUNCTION3",
+            "title": "FUNCTION3",
+            "type": "string"
+          },
+          {
+            "conceptType": "geo-source",
+            "format": "default",
+            "name": "GEO1",
+            "osType": "geo-source:target:code",
+            "slug": "GEO1",
+            "title": "GEO1",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "MODIFIED",
+            "osType": "value",
+            "slug": "MODIFIED",
+            "title": "MODIFIED",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "ORDERED_TO_PAY",
+            "osType": "value",
+            "slug": "ORDERED_TO_PAY",
+            "title": "ORDERED_TO_PAY",
+            "type": "number"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "PAID",
+            "osType": "value",
+            "slug": "PAID",
+            "title": "PAID",
+            "type": "number"
+          },
+          {
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "PROJECT1",
+            "osType": "administrative-classification:generic:level3:code:full",
+            "slug": "PROJECT1",
+            "title": "PROJECT1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR1",
+            "osType": "functional-classification:generic:level1:code",
+            "slug": "SECTOR1",
+            "title": "SECTOR1",
+            "type": "string"
+          },
+          {
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "SECTOR2",
+            "osType": "functional-classification:generic:level2:code:full",
+            "slug": "SECTOR2",
+            "title": "SECTOR2",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN1",
+            "osType": "fin-source:generic:level1:code",
+            "slug": "SOURCE_FIN1",
+            "title": "SOURCE_FIN1",
+            "type": "string"
+          },
+          {
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "SOURCE_FIN2",
+            "osType": "fin-source:generic:level2:code:full",
+            "slug": "SOURCE_FIN2",
+            "title": "SOURCE_FIN2",
+            "type": "string"
+          },
+          {
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "VALIDATED",
+            "osType": "value",
+            "slug": "VALIDATED",
+            "title": "VALIDATED",
+            "type": "number"
+          },
+          {
+            "conceptType": "date",
+            "format": "default",
+            "name": "YEAR",
+            "osType": "date:fiscal-year",
+            "slug": "YEAR",
+            "title": "YEAR",
+            "type": "integer"
+          }
+        ],
+        "primaryKey": [
+          "ADMIN1",
+          "ADMIN2",
+          "ECON1",
+          "ECON2",
+          "ECON3",
+          "ECON4",
+          "FUNCTION1",
+          "FUNCTION2",
+          "FUNCTION3",
+          "GEO1",
+          "PROJECT1",
+          "SECTOR1",
+          "SECTOR2",
+          "SOURCE_FIN1",
+          "SOURCE_FIN2",
+          "YEAR"
+        ],
+        "missingValues": [""]
+      },
+      "profile": "tabular-data-resource",
+      "name": "2005",
+      "path": "data/2005.csv",
+      "count_of_rows": 12319
+    }
+  ],
+  "title": "BOOST Burkina-Faso 2005-2015  (fr)",
+  "profile": "data-package",
+  "author": "OpenSpending",
+  "owner": "6018ab87076187018fc29c94a68a3cd2"
+}
