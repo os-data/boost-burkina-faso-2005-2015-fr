@@ -179,7 +179,7 @@
       "format": "csv",
       "hash": "664f0518574fc0d1e3f76921bd3f09f3",
       "name": "boost_burkina_faso_2005_2015_fr",
-      "path": "https://storage.openspending.org/boost_burkina_faso_2005_2015_fr.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/boost_burkina_faso_2005_2015_fr.csv",
       "schema": {
         "fields": [
           {
@@ -663,7 +663,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2016",
-      "path": "https://storage.openspending.org/2016.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2016.csv",
       "count_of_rows": 18108
     },
     {
@@ -915,7 +915,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2015",
-      "path": "https://storage.openspending.org/2015.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2015.csv",
       "count_of_rows": 26881
     },
     {
@@ -1167,7 +1167,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2014",
-      "path": "https://storage.openspending.org/2014.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2014.csv",
       "count_of_rows": 27529
     },
     {
@@ -1419,7 +1419,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2013",
-      "path": "https://storage.openspending.org/2013.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2013.csv",
       "count_of_rows": 26853
     },
     {
@@ -1671,7 +1671,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2012",
-      "path": "https://storage.openspending.org/2012.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2012.csv",
       "count_of_rows": 22248
     },
     {
@@ -1923,7 +1923,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2011",
-      "path": "https://storage.openspending.org/2011.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2011.csv",
       "count_of_rows": 21494
     },
     {
@@ -2175,7 +2175,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2010",
-      "path": "https://storage.openspending.org/2010.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2010.csv",
       "count_of_rows": 20347
     },
     {
@@ -2427,7 +2427,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2009",
-      "path": "https://storage.openspending.org/2009.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2009.csv",
       "count_of_rows": 18621
     },
     {
@@ -2679,7 +2679,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2008",
-      "path": "https://storage.openspending.org/2008.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2008.csv",
       "count_of_rows": 18047
     },
     {
@@ -2931,7 +2931,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2007",
-      "path": "https://storage.openspending.org/2007.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2007.csv",
       "count_of_rows": 15725
     },
     {
@@ -3183,7 +3183,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2006",
-      "path": "https://storage.openspending.org/2006.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2006.csv",
       "count_of_rows": 13581
     },
     {
@@ -3435,7 +3435,7 @@
       },
       "profile": "tabular-data-resource",
       "name": "2005",
-      "path": "data/2005.csv",
+      "path": "https://storage.openspending.org/boost-burkina-faso-2005-2015-fr/2005.csv",
       "count_of_rows": 12319
     }
   ],
