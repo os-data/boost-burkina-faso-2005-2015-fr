@@ -3,6 +3,11 @@
   "bytes": 114700216,
   "count_of_rows": 241753,
   "hash": "040cd95d3ebc3968bf6b63f20223fc0a",
+  "countryCode": "BF",
+  "fiscalPeriod": {
+    "start": "2005-01-01",
+    "stop": "2015-12-31"
+  },
   "model": {
     "dimensions": {
       "administrative-classification": {
